@@ -316,6 +316,9 @@ img { max-width: 100%; display: block; }
 .statusbar a:hover { color: var(--hl); }
 .statusbar .k { color: var(--gutter); }
 .statusbar .who { color: var(--fg); }
+/* Persistent home affordance — the manual asks for one on every page, so it is
+   the only statusbar link that carries the accent colour at rest. */
+.statusbar .foot-home a { color: var(--hl); }
 
 /* ============================== PARTICLES ============================== */
 .particles {
