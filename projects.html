@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f3ed">
+<title>Course Projects &amp; Work Samples — Mykhailo Rud | LE/COOP 2100 ePortfolio</title>
+<meta name="description" content="Selected projects and technical work samples, each tagged with a Lassonde undergraduate competency and paired with a reflection.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="projects" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner page">
+    <a class="wordmark" href="index.html" aria-label="Mykhailo Rud — home">
+      <span class="mark" aria-hidden="true">MR</span>
+      <span class="wordmark-text">Mykhailo Rud</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html" data-nav="home">Index</a>
+      <a href="about.html" data-nav="about">About Me</a>
+      <a href="career.html" data-nav="career">Career</a>
+      <a href="goals.html" data-nav="goals">Goals &amp; Portfolios</a>
+      <a href="reflections.html" data-nav="reflect">Reflections</a>
+      <a href="projects.html" data-nav="projects">Course Projects</a>
+      <a class="nav-cta" href="mailto:rudmichael@outlook.com">Contact ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page">
+    <section class="hero hero--sub">
+      <div class="hero-inner" style="max-width:100%">
+        <p class="eyebrow reveal"><span class="status-dot" aria-hidden="true"></span> Section E · Course Projects &amp; Work Samples</p>
+        <h1 class="display display--sm reveal" style="--d:60ms">Proof of <em>practice.</em></h1>
+        <p class="lede reveal" style="--d:120ms">
+          Selected projects and technical work, each tagged with at least one Lassonde undergraduate competency.
+          Every artifact carries a brief introduction and a full reflection — the competency tag is the beginning
+          of the argument, not the whole of it.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ARTIFACT 1 ================= -->
+    <section class="section" id="aws-malware-lab">
+      <div class="section-head reveal">
+        <div class="section-number">Artifact 01</div>
+        <h2>Isolated malware <em>analysis lab.</em></h2>
+      </div>
+
+      <div class="artifact reveal" style="--d:60ms">
+        <div class="artifact-head">
+          <p class="kicker">Work sample · Cloud security · 2026</p>
+          <h3 class="artifact-title">An AWS environment built to be safely broken</h3>
+          <p class="artifact-summary">
+            <strong>Introduction.</strong> Suspicious files needed to be executed and studied without any path back
+            to production. I designed and secured an isolated analysis environment in AWS — EC2 instances inside
+            dedicated VPCs, private subnets, security groups, IAM integrations, and S3 buckets — so that artifacts
+            could detonate and be analysed with confidence that the blast radius was contained.
+            <strong>What it demonstrates:</strong> designing for containment under real constraints, rather than
+            building the happy path and hoping.
+          </p>
+          <div class="tag-row" style="margin-top:16px">
+            <span class="tag tag--accent">Design</span>
+            <span class="tag tag--accent">Use of Engineering Tools</span>
+            <span class="tag tag--soft">Investigation</span>
+            <span class="tag tag--soft">Impact on Society &amp; the Environment</span>
+          </div>
+        </div>
+        <button class="disclosure" type="button">
+          <span class="disclosure-label">Read the reflection</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </button>
+        <div class="artifact-body">
+          <div class="reflection">
+            <div class="reflection-step">
+              <span class="step-label">Retell</span>
+              <div class="step-body">
+                Analysing potentially harmful artifacts means running them. Doing that anywhere near live
+                infrastructure is negligent, so the first problem wasn't analysis at all — it was creating somewhere
+                safe enough for analysis to be allowed. I built an isolated environment in AWS: EC2 instances inside
+                private subnets, tightly scoped security groups, dedicated IAM roles, and S3 storage for captured
+                evidence, all separated from anything production-facing. Inside it, I worked through artifacts using
+                PEStudio, Detect It Easy, FakeNet-NG, HxD, and Sysinternals, applying static reverse-engineering
+                techniques to describe malicious behaviour and extract indicators of compromise.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Relate</span>
+              <div class="step-body">
+                The engineering-design cycle I've studied in coursework — define the need, establish constraints,
+                generate and evaluate alternatives, then implement — mapped onto this problem more cleanly than any
+                assignment has. The decisive constraint wasn't technical capability but <em>consequence</em>: the
+                design had to fail safely, because the material being handled was designed to cause harm. That's the
+                <strong>Design</strong> competency in its honest form, and it's inseparable from
+                <strong>Impact on Society &amp; the Environment</strong> — the reason containment mattered was the
+                downstream effect on real infrastructure and real people, not an abstract best practice.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Reflect</span>
+              <div class="step-body">
+                What I learned about myself is that I default to solving the immediate problem and treating the
+                constraints as somebody else's job. My first instinct was to pick the analysis tools; the actual
+                engineering question was the boundary condition. What changed my thinking was realising that the
+                isolation <em>was</em> the deliverable — the analysis was only possible because of it, and a
+                brilliant finding produced in an unsafe environment would have been worthless and irresponsible.
+                What I'd do differently is write the containment argument down first and let it dictate the tooling,
+                rather than choosing tools and retrofitting a boundary around them.
+              </div>
+            </div>
+            <div class="competency-link">
+              <span class="kicker">Competency justification</span>
+              This artifact demonstrates <strong>Design</strong> because it shows a solution engineered to satisfy
+              competing constraints — analytical capability against strict containment — and
+              <strong>Use of Engineering Tools</strong> because the tools (EC2, VPC, IAM, PEStudio, FakeNet-NG, HxD)
+              were selected and operated to serve a defined analytical objective rather than used for their own sake.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARTIFACT 2 ================= -->
+    <section class="section" id="kev-automation">
+      <div class="section-head reveal">
+        <div class="section-number">Artifact 02</div>
+        <h2>Vulnerability remediation <em>automation.</em></h2>
+      </div>
+
+      <div class="artifact reveal" style="--d:60ms">
+        <div class="artifact-head">
+          <p class="kicker">Work sample · Automation &amp; security operations · 2026</p>
+          <h3 class="artifact-title">Turning ticket-by-ticket remediation into a pipeline</h3>
+          <p class="artifact-summary">
+            <strong>Introduction.</strong> Responding to CISA's Known Exploited Vulnerabilities catalogue was a
+            manual, repetitive, and easily-deprioritised process. I developed Python and PowerShell automation using
+            Microsoft Graph, the Azure SDK, REST APIs, and regex-based parsing to drive KEV remediation, endpoint
+            reporting, and vulnerability validation — so the routine work ran itself and human attention went to the
+            exceptions.
+            <strong>What it demonstrates:</strong> recognising that the bottleneck in security operations is often
+            process, not tooling.
+          </p>
+          <div class="tag-row" style="margin-top:16px">
+            <span class="tag tag--accent">Problem Analysis</span>
+            <span class="tag tag--accent">Use of Engineering Tools</span>
+            <span class="tag tag--soft">Life-Long Learning</span>
+            <span class="tag tag--soft">Professionalism</span>
+          </div>
+        </div>
+        <button class="disclosure" type="button">
+          <span class="disclosure-label">Read the reflection</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </button>
+        <div class="artifact-body">
+          <div class="reflection">
+            <div class="reflection-step">
+              <span class="step-label">Retell</span>
+              <div class="step-body">
+                Every week brought a new list of known-exploited vulnerabilities and a queue of endpoints to check
+                against it. Handled manually, the work was slow and — worse — invisible: nobody could see coverage
+                until someone asked. I wrote automation that queried the relevant Microsoft APIs, parsed and matched
+                results, generated reporting, and validated remediation status, together with scheduled Function Apps
+                and notification workflows so that the pipeline ran and reported without being driven. Where identity
+                was involved, I administered Active Directory and Entra ID — users, groups, organisational units,
+                RBAC, Conditional Access, MFA, Intune, MDM, and BYOD policy.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Relate</span>
+              <div class="step-body">
+                This connects directly to the problem-analysis approach the course frames as central to engineering:
+                state the problem before reaching for a solution. The stated problem ("we have vulnerabilities to
+                remediate") was misleading — the real problem was that remediation depended on a person remembering
+                to do it, which meant the process failed silently whenever workload spiked. Reframing it as an
+                automation problem changed what a solution even looked like. It also sits squarely in
+                <strong>Use of Engineering Tools</strong>, where the skill isn't knowing a tool exists but choosing
+                between Graph, the Azure SDK, and direct REST calls based on what the task actually required.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Reflect</span>
+              <div class="step-body">
+                What I learned about myself is that I'm willing to do repetitive work patiently, which sounds
+                virtuous and is actually a trap — the patience delayed me from questioning whether the work should
+                exist. What changed my thinking was measuring the manual process and realising how much of a
+                security team's week was being absorbed by tasks a script could do better and never forget. Since
+                then I try to ask "should this be automatic?" before asking "how do I do this faster?". What I'd do
+                differently next time is instrument the automation from the start: an automated process that can't
+                report its own coverage is only marginally better than a manual one nobody can see.
+              </div>
+            </div>
+            <div class="competency-link">
+              <span class="kicker">Competency justification</span>
+              This artifact demonstrates <strong>Problem Analysis</strong> by reframing a staffing problem as a
+              process problem and then as an automation problem, and <strong>Use of Engineering Tools</strong> by
+              applying Graph, the Azure SDK, REST APIs, and regex parsing deliberately — each chosen for a specific
+              part of the workflow and documented so it could be maintained by someone else.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARTIFACT 3 ================= -->
+    <section class="section" id="fair-risk-model">
+      <div class="section-head reveal">
+        <div class="section-number">Artifact 03</div>
+        <h2>Quantifying <em>technical risk.</em></h2>
+      </div>
+
+      <div class="artifact reveal" style="--d:60ms">
+        <div class="artifact-head">
+          <p class="kicker">Work sample · Risk &amp; economics · 2026</p>
+          <h3 class="artifact-title">Costing a growth strategy before committing to it</h3>
+          <p class="artifact-summary">
+            <strong>Introduction.</strong> A proposed expansion into SaaS and lead-generation markets hinged on
+            infrastructure that had never been stress-tested against it. Applying the FAIR framework, I quantified
+            financial and operational exposure — Asset Value, Exposure Factors, Single Loss Expectancy, and
+            Annualized Loss Expectancy — and used exponential failure models to calculate MTBF, producing a
+            probability/impact picture that leadership could actually decide against.
+            <strong>What it demonstrates:</strong> translating gut-feel risk into numbers someone can argue with.
+          </p>
+          <div class="tag-row" style="margin-top:16px">
+            <span class="tag tag--accent">Economics &amp; Project Management</span>
+            <span class="tag tag--accent">Problem Analysis</span>
+            <span class="tag tag--soft">Communication Skills</span>
+            <span class="tag tag--soft">Investigation</span>
+          </div>
+        </div>
+        <button class="disclosure" type="button">
+          <span class="disclosure-label">Read the reflection</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </button>
+        <div class="artifact-body">
+          <div class="reflection">
+            <div class="reflection-step">
+              <span class="step-label">Retell</span>
+              <div class="step-body">
+                The team wanted to know whether the existing infrastructure could support a significant expansion
+                without degrading. "Probably" wasn't a sufficient answer for a decision of that size. I modelled the
+                financial exposure of a potential breach using the FAIR framework — asset value, exposure factors,
+                single loss expectancy, annualized loss expectancy — calculated reliability metrics including MTBF
+                using exponential failure distributions, and ran threat-modelling SWOT assessments to convert
+                ambiguous market conditions into structured findings. The output was a co-authored, employer-facing
+                strategy report setting out the exposures and the recommendations for reducing them.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Relate</span>
+              <div class="step-body">
+                This is the <strong>Economics &amp; Project Management</strong> competency in a form I hadn't
+                expected to encounter as a security-minded student: the same technical facts, expressed as money and
+                downtime, became a decision instead of an opinion. The course's emphasis on communicating to an
+                audience is what made the difference — the modelling was only valuable because the report was written
+                for the people who had to act on it, not for people who shared our vocabulary. It reinforced that
+                <strong>Communication Skills</strong> in engineering isn't polish, it's the delivery mechanism for
+                the analysis itself.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Reflect</span>
+              <div class="step-body">
+                What I learned about myself is that I'm more comfortable producing an analysis than defending one, and
+                that the discomfort is worth pushing through. Presenting range-based estimates to people who wanted a
+                single number taught me that intellectual honesty often looks like unhelpful hedging until you
+                explain why the range <em>is</em> the answer. What I'd do differently is build the probability/impact
+                matrix with the audience in mind from the first day, rather than translating it at the end — the
+                framing that finally made it land should have shaped the analysis from the start.
+              </div>
+            </div>
+            <div class="competency-link">
+              <span class="kicker">Competency justification</span>
+              This artifact demonstrates <strong>Economics &amp; Project Management</strong> by expressing technical
+              risk in financial and reliability terms that supported a genuine business decision, and
+              <strong>Problem Analysis</strong> by converting an ambiguous question into defined variables with
+              stated assumptions that could be challenged and revised.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARTIFACT 4 ================= -->
+    <section class="section" id="deployment-automation">
+      <div class="section-head reveal">
+        <div class="section-number">Artifact 04</div>
+        <h2>Deployment <em>automation.</em></h2>
+      </div>
+
+      <div class="artifact reveal" style="--d:60ms">
+        <div class="artifact-head">
+          <p class="kicker">Work sample · Systems &amp; embedded · 2024</p>
+          <h3 class="artifact-title">Cutting hardware deployment time by 20–35%</h3>
+          <p class="artifact-summary">
+            <strong>Introduction.</strong> Hardware staging was slow, inconsistent, and hard to hand over. I designed
+            and optimised Linux-based workflows with Shell, C, and Python automation, prototyped ESP32-C3
+            microcontrollers in C and Python for automated diagnostics and testing, and built Windows configuration
+            pipelines that ingested Registry values programmatically to enforce baselines consistently.
+            <strong>What it demonstrates:</strong> my first measured experience of automation changing how a team
+            spends its day.
+          </p>
+          <div class="tag-row" style="margin-top:16px">
+            <span class="tag tag--accent">Use of Engineering Tools</span>
+            <span class="tag tag--accent">Individual &amp; Teamwork</span>
+            <span class="tag tag--soft">Knowledge Base for Engineering</span>
+            <span class="tag tag--soft">Design</span>
+          </div>
+        </div>
+        <button class="disclosure" type="button">
+          <span class="disclosure-label">Read the reflection</span>
+          <span class="chev" aria-hidden="true">+</span>
+        </button>
+        <div class="artifact-body">
+          <div class="reflection">
+            <div class="reflection-step">
+              <span class="step-label">Retell</span>
+              <div class="step-body">
+                Getting hardware ready involved a manual sequence repeated for every unit — slow, and prone to
+                drifting between whoever ran it. I wrote automation scripts in Shell, C, and Python that reduced
+                deployment time by 20–35% while making the process reproducible, then extended it into embedded work:
+                programming ESP32-C3 boards in C and Python to run automated diagnostics and tests. On the Windows
+                side, I built configuration pipelines that wrote Registry values programmatically so that security
+                baselines were applied identically every time instead of being remembered correctly by a person.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Relate</span>
+              <div class="step-body">
+                This is where the <strong>Knowledge Base for Engineering</strong> competency stopped being coursework
+                and started being a tool: low-level systems knowledge is what made it possible to automate below the
+                level of the operating system, and the scripting was the easy part once the underlying behaviour was
+                understood. It also connects to <strong>Individual &amp; Teamwork</strong> in a way I hadn't
+                anticipated — the value of the automation wasn't mine, it was the team's, and it only counted once
+                someone else could run it without me present.
+              </div>
+            </div>
+            <div class="reflection-step">
+              <span class="step-label">Reflect</span>
+              <div class="step-body">
+                What I learned about myself is that I'm motivated by the moment a process stops being painful for
+                someone else — that's the feedback loop that sustains me, more than solving the puzzle did. What
+                changed my thinking was realising that a script only I understood was a single point of failure with
+                good intentions. What I'd do differently is write the usage notes first and treat documentation as
+                part of the deliverable, not a courtesy added afterwards if there's time.
+              </div>
+            </div>
+            <div class="competency-link">
+              <span class="kicker">Competency justification</span>
+              This artifact demonstrates <strong>Use of Engineering Tools</strong> by applying scripting and embedded
+              toolchains to a measurable operational problem (a 20–35% reduction in deployment time), and
+              <strong>Individual &amp; Teamwork</strong> because the deliverable was designed to be handed over and
+              run by others rather than kept as personal output.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MORE TO COME ================= -->
+    <section class="section section--flush" id="course-work">
+      <div class="section-head reveal">
+        <div class="section-number">In progress</div>
+        <h2>Course projects <em>to be added.</em></h2>
+      </div>
+      <div class="grid grid--2">
+        <div class="callout reveal">
+          <p class="kicker">What goes here</p>
+          <p>
+            Selected course projects, papers, and work samples from my degree, each with a brief introduction, a
+            reflection, and at least one competency tag. This section grows every term — the four artifacts above are
+            work-based, and the entries below will be academic.
+          </p>
+        </div>
+        <div class="card card--flat reveal" style="--d:80ms">
+          <p class="kicker">Planned entries</p>
+          <h3 class="card-title">Coursework artifacts</h3>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.8;color:var(--ink-soft)">
+            <li>Data structures &amp; algorithms project — <em>to be added</em></li>
+            <li>Operating systems or networks lab report — <em>to be added</em></li>
+            <li>Software design group project (add only with written permission of co-contributors)</li>
+            <li>Technical writing sample — <em>to be added</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="page">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="mark small" aria-hidden="true">MR</span>
+        <div>
+          <strong>Mykhailo Rud</strong>
+          <a href="mailto:rudmichael@outlook.com">rudmichael@outlook.com</a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Site sections">
+        <a href="index.html">Index</a>
+        <a href="about.html">About Me</a>
+        <a href="career.html">Career</a>
+        <a href="goals.html">Goals &amp; Portfolios</a>
+        <a href="reflections.html">Reflections</a>
+        <a href="projects.html">Course Projects</a>
+        <a href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+      <div class="footer-meta">
+        <span>Last updated: September 25, 2026</span><br>
+        <a class="back-top" href="index.html">Home</a> ·
+        <a class="back-top" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <p class="footer-legal">
+      ePortfolio for LE/COOP 2100 — Lassonde School of Engineering, York University. Public-facing by design:
+      no confidential employer information, personal contact details, or third-party content is published here.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
