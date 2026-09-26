@@ -396,8 +396,19 @@ img { max-width: 100%; display: block; }
   .pane { display: block; }
   .doc { padding: 0; max-width: none; font-size: 11pt; line-height: 1.45; }
   .panel { display: block !important; }
-  .doc h1, .doc h2, .doc h3, .doc h4, .doc p, .t-title, .t-lead, .t-body { color: #111 !important; }
+
+  /* flatten the whole colour system to black on white */
+  .doc h1, .doc h2, .doc h3, .doc h4, .doc p, .doc li, .doc dt, .doc dd, .doc th, .doc td,
+  .doc .t-title, .doc .t-lead, .doc .t-body, .doc .t-dim, .doc .t-hl, .doc .t-warn, .doc .t-strike { color: #111 !important; }
+  .doc strong, .doc code, .doc em { background: transparent !important; color: #111 !important; }
+  .badge, .chip, .mk { background: transparent !important; color: #555 !important; }
   a { color: #0044cc !important; text-decoration: underline; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; }
   .ascii { display: none; }
+
+  /* career.html carries the resume. Printing it should emit ONLY the resume
+     sheet, so "save as PDF" produces a resume instead of the entire page. */
+  .doc--resume-print > *:not(#resume-sheet) { display: none !important; }
+  #resume-sheet { display: block !important; }
+  #resume-sheet .sp, #resume-sheet .sp-2 { height: 7pt; }
 }
