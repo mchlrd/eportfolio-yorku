@@ -3,471 +3,336 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4f3ed">
-<title>Goals &amp; Portfolios — Mykhailo Rud | LE/COOP 2100 ePortfolio</title>
-<meta name="description" content="Goal: Discover Myself — four portfolios documenting dreams, interests and skills, values and personality, and building credentials.">
+<meta name="theme-color" content="#1c2225">
+<title>C · Goals &amp; Portfolios — Mykhailo Rud | LE/COOP 2100 ePortfolio</title>
+<meta name="description" content="Three career goals, each gathering evidence in portfolios — beginning with Discover Myself.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="goals" id="top">
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="progress" aria-hidden="true"></div>
+<div class="particles" aria-hidden="true"></div>
+<div class="scrim"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="tree">
+    <div class="tree-root"><span class="ico">&#9662;</span><span>~/eportfolio-yorku</span></div>
+    <div class="tree-sep"></div>
+    <a class="tree-item" href="index.html" data-nav="index"><span class="ico">&#8801;</span>index / README</a>
+    <a class="tree-item" href="about.html" data-nav="about"><span class="ico">&#9656;</span>A &#183; about-me</a>
+    <details class="tree-group" open>
+      <summary><span class="chev"></span>B &#183; career/</summary>
+      <a class="tree-item" href="career.html" data-nav="career"><span class="ico">&#8801;</span>index</a>
+      <a class="tree-item" href="career.html#education">education</a>
+      <a class="tree-item" href="career.html#experience">experience</a>
+      <a class="tree-item" href="career.html#skills">skills</a>
+      <a class="tree-item" href="career.html#resume">resume</a>
+    </details>
+    <details class="tree-group" open>
+      <summary><span class="chev"></span>C &#183; goals-portfolios/</summary>
+      <a class="tree-item" href="goals.html" data-nav="goals"><span class="ico">&#8801;</span>index</a>
+      <a class="tree-item" href="goals.html#discover-myself">discover-myself</a>
+      <a class="tree-item" href="goals.html#cloud-security">cloud-security</a>
+      <a class="tree-item" href="goals.html#critical-infrastructure">critical-infrastructure</a>
+    </details>
+    <a class="tree-item" href="reflections.html" data-nav="reflections"><span class="ico">&#9656;</span>D &#183; reflections</a>
+    <a class="tree-item" href="projects.html" data-nav="projects"><span class="ico">&#9656;</span>E &#183; course-projects</a>
+    <div class="tree-sep"></div>
+    <div class="tree-note">contact/</div>
+    <a class="tree-item" href="mailto:rudmichael@outlook.com">email</a>
+    <a class="tree-item" href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">linkedin</a>
+    <a class="tree-item" href="career.html#resume">resume</a>
+    <div class="tree-sep"></div>
+    <div class="tree-note">2026-09-25 &#183; v2.0</div>
+  </div>
+</aside>
 
 <header class="topbar">
-  <div class="topbar-inner page">
-    <a class="wordmark" href="index.html" aria-label="Mykhailo Rud — home">
-      <span class="mark" aria-hidden="true">MR</span>
-      <span class="wordmark-text">Mykhailo Rud</span>
-    </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
-    <nav class="nav" id="primary-nav" aria-label="Primary">
-      <a href="index.html" data-nav="home">Index</a>
-      <a href="about.html" data-nav="about">About Me</a>
-      <a href="career.html" data-nav="career">Career</a>
-      <a href="goals.html" data-nav="goals">Goals &amp; Portfolios</a>
-      <a href="reflections.html" data-nav="reflect">Reflections</a>
-      <a href="projects.html" data-nav="projects">Course Projects</a>
-      <a class="nav-cta" href="mailto:rudmichael@outlook.com">Contact ↗</a>
-    </nav>
+  <div class="topbar-path">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="sidebar">&#9776; menu</button>
+    <a href="index.html"><span class="dim">~/eportfolio-yorku/goals-portfolios/</span>index.md</a>
+  </div>
+  <div class="topbar-controls">
+    <button class="chip" data-action="rain" aria-expanded="true">Ascii Rain <span class="glyph">[-]</span></button>
+    <span class="topbar-stat" data-fps>-- FPS</span>
   </div>
 </header>
 
-<main id="main">
-  <div class="page">
-    <section class="hero hero--sub">
-      <div class="hero-inner" style="max-width:100%">
-        <p class="eyebrow reveal"><span class="status-dot" aria-hidden="true"></span> Section C · Goals &amp; Portfolios</p>
-        <h1 class="display display--sm reveal" style="--d:60ms">Know yourself. <em>Keep building.</em></h1>
-        <p class="lede reveal" style="--d:120ms">
-          Goals are the organising framework for this portfolio. Each goal holds one or more portfolios —
-          collections of evidence that document progress, not just finished work.
-        </p>
-      </div>
-    </section>
+<main class="shell" id="main">
+  <div class="pane">
+    <div class="ln-col" aria-hidden="true"></div>
 
-    <!-- ================= GOAL ================= -->
-    <section class="section">
-      <div class="section-head reveal">
-        <div class="section-number">Goal 01</div>
-        <h2>Discover <em>myself.</em></h2>
-      </div>
-      <div class="callout reveal" style="--d:60ms;margin-bottom:10px">
-        <p class="kicker">Why this goal comes first</p>
-        <p>
-          Before I can argue that I'm ready for a career, I need to be honest about what I actually want, what I'm
-          genuinely good at, and where my judgement is weakest. The four portfolios below are that audit — written
-          down, so it can be checked against reality later.
-        </p>
-      </div>
+    <article class="doc">
+      <h1 class="t-title">C &mdash; Goals &amp; Portfolios</h1>
+      <p class="t-lead">Three goals, each with portfolios gathering evidence of progress</p>
+      <div class="sp"></div>
+      <p>Goals are the organising framework for this portfolio. Each goal below holds one or more portfolios, and
+        each portfolio collects documents, artifacts and reflections that show movement rather than arrival. The
+        sequence starts inward &mdash; <em>Discover Myself</em> &mdash; and then builds outward into the two career
+        goals I am actually working toward.</p>
 
-      <!-- ---------- Portfolio 1 ---------- -->
-      <article class="portfolio" id="dreams-and-goals">
-        <div class="portfolio-head">
-          <div class="section-number">Portfolio 1</div>
-          <div>
-            <h3 class="portfolio-title">Dreams and Goals</h3>
-            <p class="portfolio-intro">
-              <strong>What this contains:</strong> where I started, why I chose this field, and what I'm aiming at.
-              <strong>What I hoped to learn:</strong> whether my stated goals are actually mine, or just
-              the path of least resistance.
-            </p>
-          </div>
+      <!-- ================= GOAL 1 ================= -->
+      <div class="sp-2"></div>
+      <h2 id="discover-myself">## Goal 1 &mdash; Discover Myself</h2>
+      <div class="sp"></div>
+      <p>Before I can argue that I am ready for a career, I need to be honest about what I want, what I am actually
+        good at, and where my judgement is weakest. The four portfolios below are that audit, written down so it can
+        be checked against reality later.</p>
+
+      <!-- portfolio 1.1 -->
+      <div class="sp-2"></div>
+      <h3>### Portfolio 1.1 &mdash; Dreams and Goals</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> where I started, why I chose this field, and what I am aiming at.
+        <strong>What I hoped to learn:</strong> whether my stated goals are genuinely mine, or just the path of
+        least resistance.</p>
+      <div class="sp"></div>
+      <p><a href="goals.html#dreams-artifact">&#9656; artifact: why computer science &mdash; and why security</a>
+        <span class="badge badge--comp">Life-Long Learning</span></p>
+      <div class="sp"></div>
+      <details class="disc" id="dreams-artifact">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <p>I wrote a short account of how I got here: the early curiosity, the decision to study Computer Science
+            at Lassonde, and the point at which security stopped being a subject I was passing and became the thing
+            I cared about.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>This is the "why" underneath every other entry in the portfolio. The course frames professional
+            development as something you build deliberately rather than something that happens to you, and this
+            artifact is the claim that my interest is genuine rather than a response to what seemed employable. It
+            also sets the standard the other portfolios are measured against.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>Writing it down forced me to separate two things I had been conflating: wanting to be good at
+            something, and wanting to do it. What changed my thinking was noticing that my strongest memories are
+            all of problems I could not solve at first. I now want to choose based on where the hard problems are,
+            not where the comfortable ones are &mdash; and to re-read this each year to check whether that is
+            actually what I am doing.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Life-Long Learning</strong> &mdash; it documents a pattern of deliberately pursuing material
+            beyond what was required, and establishes the self-directed standard the rest of the portfolio is
+            measured against.</p>
         </div>
+      </details>
 
-        <div class="artifact reveal">
-          <div class="artifact-head">
-            <p class="kicker">Artifact · Written reflection</p>
-            <h3 class="artifact-title">Why computer science — and why security</h3>
-            <p class="artifact-summary">
-              A short account of how I got here: the early curiosity, the decision to study Computer Science at
-              Lassonde, and the moment security became the thing I cared about rather than just a topic I passed.
-            </p>
-            <div class="tag-row" style="margin-top:14px">
-              <span class="tag tag--accent">Life-Long Learning</span>
-              <span class="tag tag--soft">Professionalism</span>
-            </div>
-          </div>
-          <button class="disclosure" type="button">
-            <span class="disclosure-label">Read the reflection</span>
-            <span class="chev" aria-hidden="true">+</span>
-          </button>
-          <div class="artifact-body">
-            <div class="reflection">
-              <div class="reflection-step">
-                <span class="step-label">Retell</span>
-                <div class="step-body">
-                  <!-- DRAFT: replace the childhood detail with your own real memory. -->
-                  I took things apart before I understood what they did — usually with the vague intention of putting
-                  them back together. That instinct survived into high school and turned into an interest in how
-                  systems fit together rather than how they're used. I chose Computer Science at Lassonde because it
-                  was the only program where I could study the machinery underneath everything. Security became the
-                  focus later, during an internship where I watched an incident get investigated with real
-                  consequences attached.
-                </div>
-              </div>
-              <div class="reflection-step">
-                <span class="step-label">Relate</span>
-                <div class="step-body">
-                  COOP 2100 frames professional development as something you build deliberately rather than something
-                  that happens to you. This artifact is the "why" underneath every other entry in the portfolio — the
-                  claim that my interest is genuine and not just a response to what seemed employable. The
-                  <em>Life-Long Learning</em> competency is the connecting thread: the reason I keep choosing
-                  difficult, unfamiliar material is that I actually find the process satisfying.
-                </div>
-              </div>
-              <div class="reflection-step">
-                <span class="step-label">Reflect</span>
-                <div class="step-body">
-                  Writing this down forced me to separate two things I'd been conflating: wanting to be good at
-                  something, and wanting to <em>do</em> it. What changed my thinking was noticing that my strongest
-                  memories are all of problems I couldn't solve at first. Going forward, I want to make choices based
-                  on where the hard problems are, not where the comfortable ones are — and to revisit this artifact
-                  each year to check whether that's actually what I'm doing.
-                </div>
-              </div>
-              <div class="competency-link">
-                <span class="kicker">Competency justification</span>
-                This artifact demonstrates <strong>Life-Long Learning</strong> because it documents a pattern of
-                deliberately pursuing material beyond what was required — moving from general computing to security
-                because it was harder, not because it was easier — and it establishes the self-directed standard the
-                rest of the portfolio is measured against.
-              </div>
-            </div>
-          </div>
+      <!-- portfolio 1.2 -->
+      <div class="sp-2"></div>
+      <h3>### Portfolio 1.2 &mdash; Interests and Skills</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> interest and skills assessment results, and my Personal Development Goals
+        written in SMART form. <strong>What I hoped to learn:</strong> which of my self-assessments are backed by
+        evidence, and which are wishful thinking.</p>
+      <div class="sp"></div>
+      <p><span class="badge badge--todo">insert your assessment results</span></p>
+      <div class="sp"></div>
+      <dl class="kv">
+        <dt>Demonstrated strength</dt><dd>Automation and scripting; log and telemetry analysis; technical documentation; turning ambiguous problems into structured ones.</dd>
+        <dt>Development area</dt><dd>Presenting technical work to non-technical audiences; estimating how long unfamiliar work will actually take.</dd>
+      </dl>
+      <div class="sp"></div>
+      <p class="t-dim">The two lines above are drafted from my placement record. Replace them with your actual
+        assessment output &mdash; scores and dates included &mdash; so the reflection below can be checked against
+        real data.</p>
+
+      <div class="sp-2"></div>
+      <h4>Personal Development Goals (SMART)</h4>
+      <div class="sp"></div>
+      <p class="t-lead">1 &mdash; Earn a cloud security certification <span class="t-dim">&#183; target April 2027</span></p>
+      <p>Complete the AWS Certified Cloud Practitioner exam, then begin Solutions Architect &ndash; Associate study.
+        <em>Measurable:</em> pass the exam and add the credential ID to <a href="career.html#education">Section B</a>.
+        <em>Relevant:</em> directly supports the cloud-security direction in my career goals.
+        <em>Achievable:</em> builds on AWS work already done during my placement.</p>
+      <div class="sp"></div>
+      <p class="t-lead">2 &mdash; Build a documented detection lab <span class="t-dim">&#183; target August 2027</span></p>
+      <p>Stand up a home lab with Sysmon and a SIEM, simulate three attack techniques, and publish three written
+        detections with the queries and the reasoning behind them. <em>Measurable:</em> three public write-ups
+        linked from <a href="projects.html">Section E</a>. <em>Relevant:</em> closes the gap between operating tools
+        and explaining detections.</p>
+      <div class="sp"></div>
+      <p class="t-lead">3 &mdash; Practise explaining technical work to non-technical people <span class="t-dim">&#183; ongoing</span></p>
+      <p>Present one technical topic per term to a non-specialist audience and collect written feedback each time.
+        <em>Measurable:</em> one presentation per term with feedback retained. <em>Relevant:</em> addresses my
+        weakest assessed area and the communication expectations of a professional engineering role.</p>
+
+      <div class="sp"></div>
+      <details class="disc" id="smart-artifact">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <p>I reviewed my interest and skills assessments and cross-checked the results against what I have
+            actually produced &mdash; code, reports, working systems. Where the two agreed I kept the claim; where
+            the assessment flattered me, I moved it to a development area. I then converted the remaining gaps into
+            three SMART goals.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>The course treats goal-setting as a skill with a structure, and SMART is that structure. A vague
+            intention like "get better at cloud" cannot be checked by anyone; "pass this exam by this date and post
+            the credential" can. This is what makes the portfolio an evidence record rather than a list of
+            intentions, which is exactly what Goal 1 is meant to establish.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>The uncomfortable part was goal 3. My assessments were strongest where I already had proof and weakest
+            at the thing that decides whether good work is ever adopted: explaining it to someone who does not share
+            my vocabulary. I had been treating communication as a soft skill to pick up later. Writing it as a
+            measurable goal with feedback attached is what turned it into something I will actually be held to. What
+            I would do differently is start collecting that feedback now rather than after graduation.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Life-Long Learning</strong> &mdash; converting self-assessment into measurable, dated goals with
+            defined evidence. <strong>Professionalism</strong> &mdash; naming a genuine weakness and committing to a
+            process for correcting it.</p>
         </div>
-      </article>
+      </details>
 
-      <!-- ---------- Portfolio 2 ---------- -->
-      <article class="portfolio" id="interests-and-skills">
-        <div class="portfolio-head">
-          <div class="section-number">Portfolio 2</div>
-          <div>
-            <h3 class="portfolio-title">Interests and Skills</h3>
-            <p class="portfolio-intro">
-              <strong>What this contains:</strong> interest and skills assessment results, and my Personal
-              Development Goals written in SMART form.
-              <strong>What I hoped to learn:</strong> which of my self-assessments are backed by evidence, and which
-              are wishful thinking.
-            </p>
-          </div>
+      <!-- portfolio 1.3 -->
+      <div class="sp-2"></div>
+      <h3>### Portfolio 1.3 &mdash; Values and Personality</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> values-clarification exercises, emotional intelligence (EQ) results with
+        reflection, and how my learning style shows up in a workplace. <strong>What I hoped to learn:</strong> how I
+        behave when a team is under pressure and the answer is not obvious.</p>
+      <div class="sp"></div>
+      <dl class="kv">
+        <dt>Values (clarified)</dt><dd>Accuracy over speed. Owning mistakes without being asked. Not pretending to understand something I do not. Protecting the people who are not in the room when a decision is made.</dd>
+        <dt>EQ &amp; learning style</dt><dd><span class="badge badge--todo">insert your results</span></dd>
+      </dl>
+      <div class="sp"></div>
+      <p class="t-dim">Add your EQ assessment scores and learning-style result, with dates. The reflection below is
+        written to work with most outcomes but should quote your actual figures.</p>
+      <div class="sp"></div>
+      <details class="disc" id="eq-artifact">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <!-- DRAFT: swap in a specific moment from your placement. -->
+          <p>During my placement I worked across an operations team whose priorities changed weekly. My natural
+            approach &mdash; pick up the problem, go quiet, come back with a working answer &mdash; produced good
+            results but made me hard to track. When a colleague asked for a status update I did not have one that
+            fit into a sentence, because I had been holding the whole problem in my head.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>The course's EQ material separates self-awareness from self-management, and that is the distinction
+            that mattered here: I was aware that I go heads-down, but I had not managed it as a team behaviour. This
+            connects to my career goals too, because every role I am aiming at involves work that other people have
+            to plan around &mdash; incident response especially, where nobody can coordinate around silence.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>What I learned about myself is that my independence is a strength with a real cost: it optimises for
+            the quality of my output and quietly degrades other people's ability to plan around me. What changed my
+            thinking was realising that a status update is not administrative overhead &mdash; it is how a team
+            allocates trust. What I would do differently is write the two-line update before I start solving, not
+            after, and say "I do not know yet, and here is when I will" instead of staying silent until I do.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Individual and Teamwork</strong> &mdash; it analyses a concrete collaboration failure and names
+            the behaviour change that addresses it, rather than describing teamwork in the abstract.</p>
         </div>
+      </details>
 
-        <div class="grid grid--3" style="margin-bottom:22px">
-          <article class="card reveal">
-            <p class="kicker">Assessments</p>
-            <h3 class="card-title">Interests &amp; skills results</h3>
-            <p class="card-note">
-              <span class="badge-draft">Insert your results</span><br><br>
-              Paste your actual assessment output here (interest inventory and skills self-assessment), including
-              scores and dates, so the reflection below can be checked against real data.
-            </p>
-          </article>
-          <article class="card reveal" style="--d:80ms">
-            <p class="kicker">Evidence</p>
-            <h3 class="card-title">Strongest demonstrated areas</h3>
-            <p class="card-note">
-              <!-- DRAFT: revise to match your own assessment output. -->
-              Automation and scripting; log and telemetry analysis; technical documentation; working through
-              ambiguous problems until they become structured ones.
-            </p>
-          </article>
-          <article class="card reveal" style="--d:160ms">
-            <p class="kicker">Development areas</p>
-            <h3 class="card-title">Where I'm weakest</h3>
-            <p class="card-note">
-              <!-- DRAFT -->
-              Presenting technical work to non-technical audiences, and estimating how long unfamiliar work will
-              actually take me.
-            </p>
-          </article>
-        </div>
+      <!-- portfolio 1.4 -->
+      <div class="sp-2"></div>
+      <h3>### Portfolio 1.4 &mdash; Building Credentials</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> projects completed at school and work, community accomplishments, and
+        commendations. <strong>What I hoped to learn:</strong> which achievements actually demonstrate capability,
+        and which are just activity.</p>
+      <div class="sp"></div>
+      <ul class="bul">
+        <li><span class="mk">&#8729;</span><span>Dean's Honour Roll, Lassonde School of Engineering <span class="t-dim">&mdash; academic standing</span></span></li>
+        <li><span class="mk">&#8729;</span><span>Cisco Network Basics, AWS Cloud Computing <span class="t-dim">&mdash; certifications</span></span></li>
+        <li><span class="mk">&#8729;</span><span>Three technical placements in security, risk and systems design <span class="t-dim">&mdash; see <a href="career.html#experience">Section B</a></span></span></li>
+      </ul>
+      <div class="sp"></div>
+      <p class="t-dim">The detailed artifacts behind these credentials, with full reflections, live in
+        <a href="projects.html">Section E</a>.</p>
 
-        <div class="artifact reveal">
-          <div class="artifact-head">
-            <p class="kicker">Artifact · Personal Development Goals</p>
-            <h3 class="artifact-title">Three SMART goals for the next 12 months</h3>
-            <p class="artifact-summary">
-              Specific, measurable, achievable, relevant, and time-bound goals derived from my assessment results —
-              each one producing something that can be shown, not just claimed.
-            </p>
-            <div class="tag-row" style="margin-top:14px">
-              <span class="tag tag--accent">Life-Long Learning</span>
-              <span class="tag tag--soft">Professionalism</span>
-            </div>
-          </div>
-          <button class="disclosure" type="button">
-            <span class="disclosure-label">Read the goals &amp; reflection</span>
-            <span class="chev" aria-hidden="true">+</span>
-          </button>
-          <div class="artifact-body">
-            <!-- DRAFT: all three goals are drafted from your resume — set your own target dates. -->
-            <div class="record" style="border-top:0;padding-left:0;padding-right:0">
-              <div>
-                <p class="record-when">Goal 1 · Target: April 2027</p>
-                <p class="record-org">Specific · Measurable</p>
-              </div>
-              <div>
-                <h3>Earn a cloud security certification</h3>
-                <p style="font-size:13.5px;line-height:1.72;color:var(--ink-soft);margin:0">
-                  Complete the AWS Certified Cloud Practitioner exam, then begin Solutions Architect – Associate
-                  study. <strong>Measurable:</strong> pass the exam and add the credential ID to Section B of this
-                  portfolio. <strong>Relevant:</strong> directly supports the cloud-security direction in my career
-                  goal. <strong>Achievable:</strong> builds on the AWS work already done during my placement.
-                </p>
-              </div>
-            </div>
-            <div class="record" style="padding-left:0;padding-right:0">
-              <div>
-                <p class="record-when">Goal 2 · Target: August 2027</p>
-                <p class="record-org">Specific · Time-bound</p>
-              </div>
-              <div>
-                <h3>Build a documented detection lab</h3>
-                <p style="font-size:13.5px;line-height:1.72;color:var(--ink-soft);margin:0">
-                  Stand up a home lab with Sysmon and a SIEM, simulate three attack techniques, and publish three
-                  written detections with the queries and the reasoning behind them.
-                  <strong>Measurable:</strong> three public write-ups linked from Section E.
-                  <strong>Relevant:</strong> closes the gap between operating tools and explaining detections.
-                </p>
-              </div>
-            </div>
-            <div class="record" style="padding-left:0;padding-right:0">
-              <div>
-                <p class="record-when">Goal 3 · Target: ongoing</p>
-                <p class="record-org">Measurable · Relevant</p>
-              </div>
-              <div>
-                <h3>Practise explaining technical work to non-technical people</h3>
-                <p style="font-size:13.5px;line-height:1.72;color:var(--ink-soft);margin:0">
-                  Present one technical topic per term to a non-specialist audience and collect feedback each time.
-                  <strong>Measurable:</strong> one presentation per term with written feedback retained.
-                  <strong>Relevant:</strong> addresses my weakest assessed area and the communication expectations
-                  of a professional engineering role.
-                </p>
-              </div>
-            </div>
+      <!-- ================= GOAL 2 ================= -->
+      <div class="sp-2"></div>
+      <h2 id="cloud-security">## Goal 2 &mdash; Specialise in cloud &amp; infrastructure security</h2>
+      <div class="sp"></div>
+      <p>My first outward-facing goal. The aim is to move from administering environments to designing them:
+        architectures that are secure by default, automated controls, and systems that are difficult to
+        misconfigure in the first place.</p>
 
-            <div class="reflection">
-              <div class="reflection-step">
-                <span class="step-label">Retell</span>
-                <div class="step-body">
-                  <!-- DRAFT: replace with your real assessment experience. -->
-                  I reviewed my interest and skills assessment results and cross-checked them against what I've
-                  actually produced — code, reports, and working systems. Where the two agreed I kept the claim;
-                  where the assessment flattered me, I moved it to a development area.
-                </div>
-              </div>
-              <div class="reflection-step">
-                <span class="step-label">Relate</span>
-                <div class="step-body">
-                  The course treats goal-setting as a skill with a structure, and SMART is that structure: vague
-                  intentions ("get better at cloud") are unfalsifiable, while "pass this exam by this date and post
-                  the credential" can be checked by anyone reading this page. This is the
-                  <em>Life-Long Learning</em> competency made auditable — the portfolio becomes the evidence record
-                  rather than a summary of intentions.
-                </div>
-              </div>
-              <div class="reflection-step">
-                <span class="step-label">Reflect</span>
-                <div class="step-body">
-                  The uncomfortable part was Goal 3. My assessments were strongest where I already had proof
-                  (automation, analysis) and weakest at exactly the thing that decides whether good work is ever
-                  adopted: explaining it to someone who doesn't share my vocabulary. I've been treating communication
-                  as a soft skill to pick up later. Writing it as a measurable goal with feedback attached was the
-                  moment it became something I'd actually be held to — and the thing I'd do differently is start
-                  collecting that feedback now rather than after graduation.
-                </div>
-              </div>
-              <div class="competency-link">
-                <span class="kicker">Competency justification</span>
-                This artifact demonstrates <strong>Life-Long Learning</strong> by converting self-assessment into
-                measurable, dated development goals with defined evidence, and <strong>Professionalism</strong> by
-                naming a genuine weakness and committing to a process for correcting it.
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
+      <div class="sp-2"></div>
+      <h3>### Portfolio 2.1 &mdash; Certifications and formal training</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> the credentials that establish a baseline, and the ones in progress.
+        <strong>What I hoped to learn:</strong> whether structured study actually changes my practice, or only my
+        vocabulary.</p>
+      <div class="sp"></div>
+      <ul class="bul">
+        <li><span class="mk">&#10003;</span><span>Cisco Network Basics <span class="t-dim">&mdash; complete</span></span></li>
+        <li><span class="mk">&#10003;</span><span>AWS Cloud Computing <span class="t-dim">&mdash; complete</span></span></li>
+        <li><span class="mk">&#9633;</span><span>AWS Certified Cloud Practitioner <span class="t-dim">&mdash; in progress, target April 2027</span></span></li>
+        <li><span class="mk">&#9633;</span><span>AWS Solutions Architect &ndash; Associate <span class="t-dim">&mdash; planned</span></span></li>
+      </ul>
 
-      <!-- ---------- Portfolio 3 ---------- -->
-      <article class="portfolio" id="values-and-personality">
-        <div class="portfolio-head">
-          <div class="section-number">Portfolio 3</div>
-          <div>
-            <h3 class="portfolio-title">Values and Personality</h3>
-            <p class="portfolio-intro">
-              <strong>What this contains:</strong> values-clarification exercises, my emotional intelligence (EQ)
-              results with reflection, and how my learning style shows up in a workplace.
-              <strong>What I hoped to learn:</strong> how I behave when a team is under pressure and the answer
-              isn't obvious.
-            </p>
-          </div>
-        </div>
+      <div class="sp-2"></div>
+      <h3>### Portfolio 2.2 &mdash; Applied cloud work</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> the evidence that the training landed &mdash; environments I designed, and the
+        reasoning behind the design choices. <strong>What I hoped to learn:</strong> where my instincts are good and
+        where I am following convention without understanding it.</p>
+      <div class="sp"></div>
+      <ul class="bul">
+        <li><span class="mk">&#9656;</span><span><a href="projects.html#aws-malware-lab">Isolated AWS malware analysis lab</a> <span class="badge badge--comp">Design</span> <span class="badge badge--comp">Use of Engineering Tools</span></span></li>
+        <li><span class="mk">&#9656;</span><span><a href="projects.html#kev-automation">Vulnerability remediation automation</a> <span class="badge badge--comp">Problem Analysis</span></span></li>
+      </ul>
 
-        <div class="grid grid--2" style="margin-bottom:22px">
-          <article class="card reveal">
-            <p class="kicker">Values clarification</p>
-            <h3 class="card-title">What I won't trade away</h3>
-            <p class="card-note">
-              <!-- DRAFT: replace with the values you actually ranked. -->
-              Accuracy over speed. Ownership of mistakes without being asked. Not pretending to understand something
-              I don't. Protecting people who aren't in the room when a decision is made.
-            </p>
-          </article>
-          <article class="card reveal" style="--d:80ms">
-            <p class="kicker">EQ &amp; learning style</p>
-            <h3 class="card-title">Results</h3>
-            <p class="card-note">
-              <span class="badge-draft">Insert your results</span><br><br>
-              Add your EQ assessment scores and learning-style result (with dates) here. The reflection below is
-              written to work with most outcomes, but it should quote your actual figures.
-            </p>
-          </article>
-        </div>
+      <!-- ================= GOAL 3 ================= -->
+      <div class="sp-2"></div>
+      <h2 id="critical-infrastructure">## Goal 3 &mdash; Protect public &amp; critical infrastructure</h2>
+      <div class="sp"></div>
+      <p>The longest-term goal, and the one that gives the others a reason. It is about applying technical depth
+        where the consequences are real &mdash; services people depend on without ever thinking about them.</p>
 
-        <div class="artifact reveal">
-          <div class="artifact-head">
-            <p class="kicker">Artifact · EQ &amp; learning style reflection</p>
-            <h3 class="artifact-title">Applying my EQ and learning style in a real workplace</h3>
-            <p class="artifact-summary">
-              A reflection on how my personality and learning preferences played out during a placement — including
-              where they helped and where they actively worked against me.
-            </p>
-            <div class="tag-row" style="margin-top:14px">
-              <span class="tag tag--accent">Individual &amp; Teamwork</span>
-              <span class="tag tag--soft">Professionalism</span>
-              <span class="tag tag--soft">Ethics &amp; Equity</span>
-            </div>
-          </div>
-          <button class="disclosure" type="button">
-            <span class="disclosure-label">Read the reflection</span>
-            <span class="chev" aria-hidden="true">+</span>
-          </button>
-          <div class="artifact-body">
-            <div class="reflection">
-              <div class="reflection-step">
-                <span class="step-label">Retell</span>
-                <div class="step-body">
-                  <!-- DRAFT: swap in a specific moment from your placement. -->
-                  During my placement I worked across an operations team where priorities changed weekly. My natural
-                  approach — pick up the problem, go quiet, come back with a working answer — produced good results
-                  but made me hard to track. When a colleague asked for a status update I didn't have one that fit
-                  into a sentence, because I'd been holding the whole problem in my head.
-                </div>
-              </div>
-              <div class="reflection-step">
-                <span class="step-label">Relate</span>
-                <div class="step-body">
-                  The course's EQ material separates self-awareness from self-management, which is the distinction that
-                  mattered here: I was aware that I go heads-down, but I hadn't managed it as a team behaviour. This
-                  artifact connects to <strong>Individual &amp; Teamwork</strong> because working well alone isn't the
-                  same as being easy to work with — the second requires deliberately surfacing progress at a
-                  colleague's rhythm rather than my own. It also touches <strong>Ethics &amp; Equity</strong> in the
-                  values I listed: deciding what happens to people affected by a system, when they're not the ones
-                  asking for it.
-                </div>
-              </div>
-              <div class="reflection-step">
-                <span class="step-label">Reflect</span>
-                <div class="step-body">
-                  What I learned about myself is that my independence is a strength with a real cost attached: it
-                  optimises for the quality of my output and quietly degrades other people's ability to plan around
-                  me. What changed my thinking was realising that a status update isn't administrative overhead — it's
-                  how a team allocates trust. What I'd do differently is write the two-line update before I start
-                  solving, not after, and say "I don't know yet, and here's when I will" instead of staying silent
-                  until I do.
-                </div>
-              </div>
-              <div class="competency-link">
-                <span class="kicker">Competency justification</span>
-                This artifact demonstrates <strong>Individual &amp; Teamwork</strong> by analysing a concrete
-                collaboration failure and naming the specific behaviour change that addresses it, rather than
-                describing teamwork in the abstract.
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
+      <div class="sp-2"></div>
+      <h3>### Portfolio 3.1 &mdash; Public-sector practice</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> what working inside a public institution actually taught me.
+        <strong>What I hoped to learn:</strong> whether the constraints of public-sector engineering are limitations
+        or the point.</p>
+      <div class="sp"></div>
+      <p>My current placement is my first sustained experience of infrastructure that carries public consequence:
+        identity systems that gate access to services, and vulnerability work where a missed remediation is not a
+        metric but a risk to residents. The most useful thing I have learned is that the hard part is rarely the
+        technology &mdash; it is the accountability, the documentation, and the fact that the people affected are
+        not in the room.</p>
 
-      <!-- ---------- Portfolio 4 ---------- -->
-      <article class="portfolio" id="building-credentials">
-        <div class="portfolio-head">
-          <div class="section-number">Portfolio 4</div>
-          <div>
-            <h3 class="portfolio-title">Building Credentials</h3>
-            <p class="portfolio-intro">
-              <strong>What this contains:</strong> projects completed at school and at work, community
-              accomplishments, and commendations.
-              <strong>What I hoped to learn:</strong> which achievements actually demonstrate capability, and which
-              are just activity.
-            </p>
-          </div>
-        </div>
+      <div class="sp-2"></div>
+      <h3>### Portfolio 3.2 &mdash; Ethics, sustainability and responsibility</h3>
+      <div class="sp"></div>
+      <p><strong>Contents:</strong> the ethical and sustainability questions my work raises, and how I have reasoned
+        about them. <strong>What I hoped to learn:</strong> how to hold a technical decision and its consequences in
+        the same thought.</p>
+      <div class="sp"></div>
+      <ul class="bul">
+        <li><span class="mk">&#9656;</span><span><a href="projects.html#ethics-sustainability">Handling malicious software, and who carries the risk</a> <span class="badge badge--comp">Ethics and Equity</span> <span class="badge badge--comp">Impact on Society and the Environment</span></span></li>
+      </ul>
+      <div class="sp"></div>
+      <p class="t-dim">This artifact was added to meet the Week 7&ndash;8 requirement for a sustainability and ethics
+        discussion alongside the EQ reflection.</p>
+    </article>
 
-        <div class="grid grid--3">
-          <article class="card reveal">
-            <p class="kicker">Commendation</p>
-            <h3 class="card-title">Dean's Honour Roll</h3>
-            <p class="card-note">Lassonde School of Engineering, York University — sustained academic standing.</p>
-            <div class="card-foot"><span>Education</span><span aria-hidden="true">↗</span></div>
-          </article>
-          <article class="card reveal" style="--d:80ms">
-            <p class="kicker">Credential</p>
-            <h3 class="card-title">Cisco Network Basics · AWS Cloud Computing</h3>
-            <p class="card-note">Foundational networking and cloud credentials supporting security coursework.</p>
-            <div class="card-foot"><span>Certifications</span><span aria-hidden="true">↗</span></div>
-          </article>
-          <article class="card reveal" style="--d:160ms">
-            <p class="kicker">Work</p>
-            <h3 class="card-title">Three technical placements</h3>
-            <p class="card-note">Cyber security, technical risk, and system design — each producing something that shipped.</p>
-            <div class="card-foot"><a href="career.html#experience">See Section B →</a><span aria-hidden="true">↗</span></div>
-          </article>
-        </div>
-
-        <div class="callout reveal" style="margin-top:24px">
-          <p class="kicker">Where the evidence lives</p>
-          <p>
-            The detailed artifacts behind these credentials — with full Retell / Relate / Reflect reflections and
-            competency tagging — are collected in <a href="projects.html" style="border-bottom:1px solid var(--line-strong)">Section E: Course Projects &amp; Work Samples</a>.
-            <a href="reflections.html" style="border-bottom:1px solid var(--line-strong)">Section D</a> indexes every
-            reflection in one place.
-          </p>
-        </div>
-      </article>
-    </section>
+    <div class="ln-col ln-col--right" aria-hidden="true"></div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="page">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="mark small" aria-hidden="true">MR</span>
-        <div>
-          <strong>Mykhailo Rud</strong>
-          <a href="mailto:rudmichael@outlook.com">rudmichael@outlook.com</a>
-        </div>
-      </div>
-      <nav class="footer-nav" aria-label="Site sections">
-        <a href="index.html">Index</a>
-        <a href="about.html">About Me</a>
-        <a href="career.html">Career</a>
-        <a href="goals.html">Goals &amp; Portfolios</a>
-        <a href="reflections.html">Reflections</a>
-        <a href="projects.html">Course Projects</a>
-        <a href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </nav>
-      <div class="footer-meta">
-        <span>Last updated: September 25, 2026</span><br>
-        <a class="back-top" href="index.html">Home</a> ·
-        <a class="back-top" href="#top">Back to top ↑</a>
-      </div>
-    </div>
-    <p class="footer-legal">
-      ePortfolio for LE/COOP 2100 — Lassonde School of Engineering, York University. Public-facing by design:
-      no confidential employer information, personal contact details, or third-party content is published here.
-    </p>
-  </div>
+<footer class="statusbar">
+  <span class="who">Mykhailo Rud</span>
+  <span class="hide-sm"><a href="mailto:rudmichael@outlook.com">rudmichael@outlook.com</a></span>
+  <span class="hide-sm"><a href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">linkedin</a></span>
+  <span class="hide-sm">Last updated: 2026-09-25</span>
+  <span class="grow"></span>
+  <span class="hide-sm k">&#8592; &#8594; navigate</span>
+  <span data-clock>--:--:--</span>
+  <span class="k">[4/6]</span>
 </footer>
 
 <script src="assets/main.js"></script>

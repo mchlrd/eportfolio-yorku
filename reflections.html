@@ -3,215 +3,168 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4f3ed">
-<title>Reflections — Mykhailo Rud | LE/COOP 2100 ePortfolio</title>
-<meta name="description" content="Every reflection in the portfolio, organised with the Retell / Relate / Reflect framework.">
+<meta name="theme-color" content="#1c2225">
+<title>D · Reflections — Mykhailo Rud | LE/COOP 2100 ePortfolio</title>
+<meta name="description" content="Every reflection in the portfolio, with the framework used to write them.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="reflect" id="top">
+<body data-page="reflections" id="top">
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="progress" aria-hidden="true"></div>
+<div class="particles" aria-hidden="true"></div>
+<div class="scrim"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="tree">
+    <div class="tree-root"><span class="ico">&#9662;</span><span>~/eportfolio-yorku</span></div>
+    <div class="tree-sep"></div>
+    <a class="tree-item" href="index.html" data-nav="index"><span class="ico">&#8801;</span>index / README</a>
+    <a class="tree-item" href="about.html" data-nav="about"><span class="ico">&#9656;</span>A &#183; about-me</a>
+    <details class="tree-group" open>
+      <summary><span class="chev"></span>B &#183; career/</summary>
+      <a class="tree-item" href="career.html" data-nav="career"><span class="ico">&#8801;</span>index</a>
+      <a class="tree-item" href="career.html#education">education</a>
+      <a class="tree-item" href="career.html#experience">experience</a>
+      <a class="tree-item" href="career.html#skills">skills</a>
+      <a class="tree-item" href="career.html#resume">resume</a>
+    </details>
+    <details class="tree-group" open>
+      <summary><span class="chev"></span>C &#183; goals-portfolios/</summary>
+      <a class="tree-item" href="goals.html" data-nav="goals"><span class="ico">&#8801;</span>index</a>
+      <a class="tree-item" href="goals.html#discover-myself">discover-myself</a>
+      <a class="tree-item" href="goals.html#cloud-security">cloud-security</a>
+      <a class="tree-item" href="goals.html#critical-infrastructure">critical-infrastructure</a>
+    </details>
+    <details class="tree-group" open>
+      <summary><span class="chev"></span>D &#183; reflections/</summary>
+      <a class="tree-item" href="reflections.html" data-nav="reflections"><span class="ico">&#8801;</span>index</a>
+      <a class="tree-item" href="#framework">framework</a>
+      <a class="tree-item" href="#all-reflections">all-reflections</a>
+    </details>
+    <a class="tree-item" href="projects.html" data-nav="projects"><span class="ico">&#9656;</span>E &#183; course-projects</a>
+    <div class="tree-sep"></div>
+    <div class="tree-note">contact/</div>
+    <a class="tree-item" href="mailto:rudmichael@outlook.com">email</a>
+    <a class="tree-item" href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">linkedin</a>
+    <a class="tree-item" href="career.html#resume">resume</a>
+    <div class="tree-sep"></div>
+    <div class="tree-note">2026-09-25 &#183; v2.0</div>
+  </div>
+</aside>
 
 <header class="topbar">
-  <div class="topbar-inner page">
-    <a class="wordmark" href="index.html" aria-label="Mykhailo Rud — home">
-      <span class="mark" aria-hidden="true">MR</span>
-      <span class="wordmark-text">Mykhailo Rud</span>
-    </a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
-    <nav class="nav" id="primary-nav" aria-label="Primary">
-      <a href="index.html" data-nav="home">Index</a>
-      <a href="about.html" data-nav="about">About Me</a>
-      <a href="career.html" data-nav="career">Career</a>
-      <a href="goals.html" data-nav="goals">Goals &amp; Portfolios</a>
-      <a href="reflections.html" data-nav="reflect">Reflections</a>
-      <a href="projects.html" data-nav="projects">Course Projects</a>
-      <a class="nav-cta" href="mailto:rudmichael@outlook.com">Contact ↗</a>
-    </nav>
+  <div class="topbar-path">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="sidebar">&#9776; menu</button>
+    <a href="index.html"><span class="dim">~/eportfolio-yorku/reflections/</span>index.md</a>
+  </div>
+  <div class="topbar-controls">
+    <button class="chip" data-action="rain" aria-expanded="true">Ascii Rain <span class="glyph">[-]</span></button>
+    <span class="topbar-stat" data-fps>-- FPS</span>
   </div>
 </header>
 
-<main id="main">
-  <div class="page">
-    <section class="hero hero--sub">
-      <div class="hero-inner" style="max-width:100%">
-        <p class="eyebrow reveal"><span class="status-dot" aria-hidden="true"></span> Section D · Reflections</p>
-        <h1 class="display display--sm reveal" style="--d:60ms">More than <em>what happened.</em></h1>
-        <p class="lede reveal" style="--d:120ms">
-          A reflection is not a summary. It is an honest, analytical response to an experience — and every artifact
-          in this portfolio has one attached, indexed here so nothing is buried.
-        </p>
-      </div>
-    </section>
+<main class="shell" id="main">
+  <div class="pane">
+    <div class="ln-col" aria-hidden="true"></div>
 
-    <!-- ================= FRAMEWORK ================= -->
-    <section class="section" id="framework">
-      <div class="section-head reveal">
-        <div class="section-number">The framework</div>
-        <h2>Retell. Relate. <em>Reflect.</em></h2>
-      </div>
-      <div class="grid grid--3">
-        <article class="card reveal">
-          <p class="kicker">Step 1</p>
-          <h3 class="card-title">Retell</h3>
-          <p class="card-note">
-            What happened? Briefly describe the experience, project, or task. Set the scene without padding it out —
-            description is the floor, not the ceiling.
-          </p>
-        </article>
-        <article class="card reveal" style="--d:80ms">
-          <p class="kicker">Step 2</p>
-          <h3 class="card-title">Relate</h3>
-          <p class="card-note">
-            How does this connect to what I'm learning in COOP 2100? Which concepts, frameworks, or competencies
-            apply — and why those, specifically?
-          </p>
-        </article>
-        <article class="card reveal" style="--d:160ms">
-          <p class="kicker">Step 3</p>
-          <h3 class="card-title">Reflect</h3>
-          <p class="card-note">
-            What did I learn about myself? What would I do differently? How has this changed my thinking? This is
-            where the growth is demonstrated.
-          </p>
-        </article>
-      </div>
+    <article class="doc">
+      <h1 class="t-title">D &mdash; Reflections</h1>
+      <p class="t-lead">More than what happened</p>
+      <div class="sp"></div>
+      <p>A reflection is not a summary. It is an honest, analytical response to an experience &mdash; and every
+        artifact in this portfolio has one attached. They are indexed here so that nothing is buried behind a click.</p>
 
-      <div class="callout reveal" style="margin-top:26px">
-        <p class="kicker">The standard I'm holding myself to</p>
-        <p>
-          Reflections that only <em>Retell</em> don't demonstrate anything — they describe activity and leave the
-          reader to guess at the learning. Every reflection on this site is written so that the
-          <em>Relate</em> and <em>Reflect</em> sections carry the argument, and each one names the competency it
-          demonstrates and explains the connection rather than simply tagging it.
-        </p>
-      </div>
-    </section>
+      <!-- ================= FRAMEWORK ================= -->
+      <div class="sp-2"></div>
+      <h2 id="framework">## Framework</h2>
+      <div class="sp"></div>
+      <p>I write each reflection against two frames that the course gives, because they ask slightly different
+        things and together they force more honesty than either alone. Every reflection below is labelled with all
+        six so a reader can check either one.</p>
+      <div class="sp"></div>
+      <dl class="kv">
+        <dt>Retell</dt><dd><span class="t-dim">What happened, briefly.</span> &#8594; answers <em>what did I create or do?</em></dd>
+        <dt>Relate</dt><dd><span class="t-dim">Which concepts, frameworks or competencies apply, and why those.</span> &#8594; answers <em>how does this connect to my goals?</em></dd>
+        <dt>Reflect</dt><dd><span class="t-dim">What I learned about myself, and what I would do differently.</span> &#8594; answers <em>what did I learn?</em></dd>
+      </dl>
+      <div class="sp"></div>
+      <p class="t-dim">Each reflection then closes with an explicit competency justification. Tagging an artifact is
+        not evidence that it demonstrates anything &mdash; the argument has to be made in words.</p>
 
-    <!-- ================= INDEX OF REFLECTIONS ================= -->
-    <section class="section section--flush" id="all-reflections">
-      <div class="section-head reveal">
-        <div class="section-number">Index</div>
-        <h2>Every reflection, <em>in one place.</em></h2>
-      </div>
-      <p class="lede reveal" style="--d:40ms;margin-bottom:26px">
-        Seven reflections across Sections C and E. Follow any entry to read the full Retell / Relate / Reflect
-        treatment alongside its artifact.
-      </p>
+      <div class="sp-2"></div>
+      <h2>## The standard I hold myself to</h2>
+      <div class="sp"></div>
+      <p>Reflections that only <em>Retell</em> demonstrate nothing &mdash; they describe activity and leave the
+        reader to guess at the learning. Every reflection here is written so that the <em>Relate</em> and
+        <em>Reflect</em> sections carry the weight, and each one names a specific moment rather than describing a
+        general tendency. Where I could not yet answer honestly &mdash; because the experience is still in
+        progress &mdash; I have said so rather than inventing a conclusion.</p>
 
-      <nav class="toc" aria-label="Index of reflections">
-        <a class="toc-item reveal" href="goals.html#dreams-and-goals">
-          <span class="toc-no">01</span>
-          <span class="toc-title">Why computer science — and why security</span>
-          <span class="toc-desc">Where the interest came from, and the moment security stopped being a subject and became the point.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Life-Long Learning</span><span class="tag tag--soft">Section C</span></span>
-        </a>
+      <!-- ================= INDEX ================= -->
+      <div class="sp-2"></div>
+      <h2 id="all-reflections">## Index &mdash; all reflections</h2>
+      <div class="sp"></div>
+      <p class="t-dim">Eight reflections across Sections C and E. Each link opens the full text alongside its
+        artifact.</p>
+      <div class="sp"></div>
 
-        <a class="toc-item reveal" href="goals.html#interests-and-skills">
-          <span class="toc-no">02</span>
-          <span class="toc-title">Three SMART goals for the next 12 months</span>
-          <span class="toc-desc">Checking assessment claims against evidence, and turning the weakest area into something measurable.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Life-Long Learning</span><span class="tag tag--soft">Professionalism</span></span>
-        </a>
+      <ul class="src">
+        <li><span class="n">C.1.1</span><span><a href="goals.html#dreams-artifact">Why computer science &mdash; and why security</a><br>
+          <span class="t-dim">Where the interest came from, and the moment security stopped being a subject and became the point.</span><br>
+          <span class="badge badge--comp">Life-Long Learning</span></span></li>
 
-        <a class="toc-item reveal" href="goals.html#values-and-personality">
-          <span class="toc-no">03</span>
-          <span class="toc-title">Applying my EQ and learning style in a real workplace</span>
-          <span class="toc-desc">Independence as a strength with a cost attached, and why a status update is really about trust.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Individual &amp; Teamwork</span><span class="tag tag--soft">Section C</span></span>
-        </a>
+        <li><span class="n">C.1.2</span><span><a href="goals.html#smart-artifact">Three SMART goals for the next 12 months</a><br>
+          <span class="t-dim">Checking assessment claims against evidence, and turning the weakest area into something measurable.</span><br>
+          <span class="badge badge--comp">Life-Long Learning</span> <span class="badge badge--comp">Professionalism</span></span></li>
 
-        <a class="toc-item reveal" href="projects.html#aws-malware-lab">
-          <span class="toc-no">04</span>
-          <span class="toc-title">An AWS environment built to be safely broken</span>
-          <span class="toc-desc">Discovering that the containment <em>was</em> the deliverable, and that constraints come before tools.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Design</span><span class="tag tag--soft">Section E</span></span>
-        </a>
+        <li><span class="n">C.1.3</span><span><a href="goals.html#eq-artifact">Applying my EQ and learning style in a real workplace</a><br>
+          <span class="t-dim">Independence as a strength with a cost attached, and why a status update is really about trust.</span><br>
+          <span class="badge badge--comp">Individual and Teamwork</span></span></li>
 
-        <a class="toc-item reveal" href="projects.html#kev-automation">
-          <span class="toc-no">05</span>
-          <span class="toc-title">Turning ticket-by-ticket remediation into a pipeline</span>
-          <span class="toc-desc">Patience with repetitive work is a trap; the real question is whether the work should exist at all.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Problem Analysis</span><span class="tag tag--soft">Section E</span></span>
-        </a>
+        <li><span class="n">E.01</span><span><a href="projects.html#aws-malware-lab">An AWS environment built to be safely broken</a><br>
+          <span class="t-dim">Discovering that the containment <em>was</em> the deliverable, and that constraints come before tools.</span><br>
+          <span class="badge badge--comp">Design</span> <span class="badge badge--comp">Use of Engineering Tools</span></span></li>
 
-        <a class="toc-item reveal" href="projects.html#fair-risk-model">
-          <span class="toc-no">06</span>
-          <span class="toc-title">Costing a growth strategy before committing to it</span>
-          <span class="toc-desc">What it takes to defend a range when the audience wants a single number — and why the range is the answer.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Economics &amp; Project Management</span><span class="tag tag--soft">Section E</span></span>
-        </a>
+        <li><span class="n">E.02</span><span><a href="projects.html#kev-automation">Turning ticket-by-ticket remediation into a pipeline</a><br>
+          <span class="t-dim">Patience with repetitive work is a trap; the real question is whether the work should exist at all.</span><br>
+          <span class="badge badge--comp">Problem Analysis</span> <span class="badge badge--comp">Use of Engineering Tools</span></span></li>
 
-        <a class="toc-item reveal" href="projects.html#deployment-automation">
-          <span class="toc-no">07</span>
-          <span class="toc-title">Cutting hardware deployment time by 20–35%</span>
-          <span class="toc-desc">A script only I understood was a single point of failure with good intentions.</span>
-          <span class="toc-arrow" aria-hidden="true">↗</span>
-          <span class="toc-meta"><span class="tag tag--soft">Use of Engineering Tools</span><span class="tag tag--soft">Section E</span></span>
-        </a>
-      </nav>
+        <li><span class="n">E.03</span><span><a href="projects.html#fair-risk-model">Costing a growth strategy before committing to it</a><br>
+          <span class="t-dim">What it takes to defend a range when the audience wants a single number.</span><br>
+          <span class="badge badge--comp">Economics and Project Management</span> <span class="badge badge--comp">Problem Analysis</span></span></li>
 
-      <div class="grid grid--2" style="margin-top:30px">
-        <div class="callout reveal">
-          <p class="kicker">Why the index matters</p>
-          <p>
-            Reflections are only useful if they can be found. Deep-linking each one from a single index means a
-            reader — or a peer reviewer — can see the full spread of my learning in one pass and then go straight to
-            the evidence behind any claim.
-          </p>
-        </div>
-        <div class="card reveal" style="--d:80ms">
-          <p class="kicker">Also here</p>
-          <h3 class="card-title">Critique &amp; purpose</h3>
-          <p class="card-note">
-            My working purpose statement sits on the <a href="index.html#purpose" style="border-bottom:1px solid var(--line-strong)">index page</a>,
-            and the competency justifications attached to each artifact are printed in full within
-            <a href="projects.html" style="border-bottom:1px solid var(--line-strong)">Section E</a> and
-            <a href="goals.html" style="border-bottom:1px solid var(--line-strong)">Section C</a>.
-          </p>
-          <div class="card-foot"><a href="index.html#purpose">Read the purpose statement →</a><span aria-hidden="true">↗</span></div>
-        </div>
-      </div>
-    </section>
+        <li><span class="n">E.04</span><span><a href="projects.html#deployment-automation">Cutting hardware deployment time by 20&ndash;35%</a><br>
+          <span class="t-dim">A script only I understood was a single point of failure with good intentions.</span><br>
+          <span class="badge badge--comp">Use of Engineering Tools</span> <span class="badge badge--comp">Individual and Teamwork</span></span></li>
+
+        <li><span class="n">E.05</span><span><a href="projects.html#ethics-sustainability">Handling malicious software, and who carries the risk</a><br>
+          <span class="t-dim">Why "it is isolated, so it is fine" is a technical answer to an ethical question.</span><br>
+          <span class="badge badge--comp">Ethics and Equity</span> <span class="badge badge--comp">Impact on Society and the Environment</span></span></li>
+      </ul>
+
+      <div class="sp-2"></div>
+      <h2>## Critique</h2>
+      <div class="sp"></div>
+      <p class="t-dim">An honest note on what this collection does and does not show yet. The reflections are
+        strongest where the evidence is concrete &mdash; the placement artifacts, where I can point at a decision I
+        made and a consequence I noticed. They are weaker where I am reasoning about something still in progress,
+        and the two assessment-dependent portfolios in Section C are the thinnest entries until my interest, skills,
+        and EQ results are actually in them. That gap is why the status list on the
+        <a href="index.html#top">index page</a> is kept visible rather than tidied away.</p>
+    </article>
+
+    <div class="ln-col ln-col--right" aria-hidden="true"></div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="page">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="mark small" aria-hidden="true">MR</span>
-        <div>
-          <strong>Mykhailo Rud</strong>
-          <a href="mailto:rudmichael@outlook.com">rudmichael@outlook.com</a>
-        </div>
-      </div>
-      <nav class="footer-nav" aria-label="Site sections">
-        <a href="index.html">Index</a>
-        <a href="about.html">About Me</a>
-        <a href="career.html">Career</a>
-        <a href="goals.html">Goals &amp; Portfolios</a>
-        <a href="reflections.html">Reflections</a>
-        <a href="projects.html">Course Projects</a>
-        <a href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </nav>
-      <div class="footer-meta">
-        <span>Last updated: September 25, 2026</span><br>
-        <a class="back-top" href="index.html">Home</a> ·
-        <a class="back-top" href="#top">Back to top ↑</a>
-      </div>
-    </div>
-    <p class="footer-legal">
-      ePortfolio for LE/COOP 2100 — Lassonde School of Engineering, York University. Public-facing by design:
-      no confidential employer information, personal contact details, or third-party content is published here.
-    </p>
-  </div>
+<footer class="statusbar">
+  <span class="who">Mykhailo Rud</span>
+  <span class="hide-sm"><a href="mailto:rudmichael@outlook.com">rudmichael@outlook.com</a></span>
+  <span class="hide-sm"><a href="https://www.linkedin.com/in/mchlrud" target="_blank" rel="noopener">linkedin</a></span>
+  <span class="hide-sm">Last updated: 2026-09-25</span>
+  <span class="grow"></span>
+  <span class="hide-sm k">&#8592; &#8594; navigate</span>
+  <span data-clock>--:--:--</span>
+  <span class="k">[5/6]</span>
 </footer>
 
 <script src="assets/main.js"></script>
