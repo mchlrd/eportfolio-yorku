@@ -1,5 +1,5 @@
 /* ===========================================================================
-   Mykhailo Rud — LE/COOP 2100 ePortfolio
+   Mykhailo Rud — ePortfolio
    Terminal theme behaviour.
 
    Progressive enhancement: the site is fully readable without JavaScript.

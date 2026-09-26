@@ -1,7 +1,7 @@
 # ePortfolio — Mykhailo Rud
 
-Professional ePortfolio for **LE/COOP 2100** (Professional Development for Co-op Students),
-Lassonde School of Engineering, York University.
+Professional ePortfolio: B.Sc. (Honours) Computer Science, Lassonde School of Engineering,
+York University.
 
 Static site: plain HTML, CSS, and JavaScript. **No build step, no dependencies, no framework.**
 
@@ -27,14 +27,23 @@ the real line count.
 
 | File | Section |
 | --- | --- |
-| `index.html` | Index / README — purpose, hyperlinked contents, status, competencies |
+| `index.html` | Index — purpose, hyperlinked contents, status, competencies |
 | `about.html` | **A** — About Me (biography, program, goals, languages, interests) |
 | `career.html` | **B** — Education, courses, all experience, skills, résumé |
 | `goals.html` | **C** — Three career goals, each gathering evidence in portfolios |
-| `reflections.html` | **D** — Reflections framework and the index of all eight |
-| `projects.html` | **E** — Five competency-tagged artifacts with full reflections |
+| `reflections.html` | **D** — Reflections framework and the index of all twelve |
+| `projects.html` | **E** — Nine competency-tagged artifacts with full reflections |
 | `assets/style.css` | The whole design system (tokens, grid, editor chrome, print) |
 | `assets/main.js` | Editor chrome: tree, gutter, particle field, keyboard nav |
+| `assets/photo.jpg` | Portrait, 570×760 (2× for the 285×380 display box) |
+
+## Editing the shared assets
+
+Both shared assets are referenced as `assets/style.css?v=N` / `assets/main.js?v=N` from all six
+pages. `python -m http.server` sends no `Cache-Control`, so browsers apply heuristic freshness and
+will keep serving a **stale stylesheet after an edit**. Bump `N` in all six pages whenever either
+asset changes. GitHub Pages sends `max-age=600`, so the version query also protects returning
+visitors; Vercel revalidates and does not need it.
 
 ## Accessibility and resilience
 
@@ -56,8 +65,8 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Then open <http://127.0.0.1:8000/index.html>.
 
-To print or save the r&#233;sum&#233; as a PDF, open `career.html#resume` and use its
-**print / save as PDF** control. Print styles strip the editor chrome and render a clean document.
+To print or save the résumé as a PDF, open `career.html#resume` and use its **print / save as PDF**
+control. Print styles strip the editor chrome and render a clean document.
 
 ## Deploying
 
@@ -78,6 +87,8 @@ third-party images are not published without permission.
 ## Outstanding
 
 Items still awaiting content are marked in the UI with an amber `todo` badge rather than quietly
-omitted — see the **Status** section on the home page. Currently waiting on: high school details,
-courses completed, other employment, volunteer and co-curricular roles, assessment results
-(interests/skills and EQ), a photograph, and academic course projects.
+omitted — see the **Status** section on the home page. Currently waiting on:
+
+- interest and skills assessment results (with dates)
+- EQ and learning-style results (with dates)
+- selected academic course projects for Section E
