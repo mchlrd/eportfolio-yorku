@@ -43,11 +43,16 @@
       <a class="tree-item" href="projects.html#fair-risk-model">03-fair-risk-model</a>
       <a class="tree-item" href="projects.html#deployment-automation">04-deployment-automation</a>
       <a class="tree-item" href="projects.html#ethics-sustainability">05-ethics-sustainability</a>
+      <a class="tree-item" href="projects.html#azure-soc-lab">06-azure-soc-lab</a>
+      <a class="tree-item" href="projects.html#suricata-splunk-soc">07-suricata-splunk</a>
+      <a class="tree-item" href="projects.html#pfsense-lab">08-pfsense-lab</a>
+      <a class="tree-item" href="projects.html#flight-price-ml">09-flight-price-ml</a>
     </details>
     <div class="tree-sep"></div>
     <div class="tree-note">contact/</div>
     <a class="tree-item" href="mailto:rudmichael@outlook.com">email</a>
     <a class="tree-item" href="https://www.linkedin.com/in/mchlurd/" target="_blank" rel="noopener">linkedin</a>
+    <a class="tree-item" href="https://github.com/mchlrd" target="_blank" rel="noopener">github</a>
     <a class="tree-item" href="career.html#resume">resume</a>
     <div class="tree-sep"></div>
     <div class="tree-note">2026-09-25 &#183; v2.0</div>
@@ -71,11 +76,11 @@
 
     <article class="doc">
       <h1 class="t-title">E &mdash; Course Projects &amp; Work Samples</h1>
-      <p class="t-lead">Five artifacts, each tagged and reflected on</p>
+      <p class="t-lead">Nine artifacts, each tagged and reflected on</p>
       <div class="sp"></div>
-      <p>Selected technical work, most of it produced during placements. Each artifact below opens with a brief
-        introduction and then a full reflection. The competency tag is the beginning of the argument, never the
-        whole of it.</p>
+      <p>Selected technical work &mdash; five from placements, four built independently. Each artifact opens with
+        a brief introduction and then a full reflection. The competency tag is the beginning of the argument,
+        never the whole of it.</p>
 
       <!-- ================= ARTIFACT 01 ================= -->
       <div class="sp-2"></div>
@@ -357,6 +362,250 @@
         </div>
       </details>
 
+      <!-- ================= INDEPENDENT WORK ================= -->
+      <div class="sp-2"></div>
+      <h2 id="personal-projects">## Independent projects</h2>
+      <div class="sp"></div>
+      <p>The five artifacts above come from placements or paid work. The four below were built on my own time,
+        from an empty subscription or a bare hypervisor, with nobody specifying the requirements but me. They are
+        the clearest evidence I have of self-directed work, and they are all public on
+        <a href="https://github.com/mchlrd" target="_blank" rel="noopener">GitHub</a>.</p>
+
+      <!-- artifact 06 -->
+      <div class="sp-2"></div>
+      <h3 id="azure-soc-lab">### Artifact 06 &mdash; Azure Cloud SOC lab</h3>
+      <div class="sp"></div>
+      <p class="t-dim">independent project &#183; cloud detection engineering &#183; <a href="https://github.com/mchlrd/AzureCloudSecurityLab" target="_blank" rel="noopener">source &#8599;</a></p>
+      <div class="sp"></div>
+      <p class="t-hl">
+        <span class="badge badge--comp">Design</span>
+        <span class="badge badge--comp">Use of Engineering Tools</span>
+        <span class="badge badge--comp">Investigation</span>
+      </p>
+      <div class="sp"></div>
+      <p class="t-lead">Introduction</p>
+      <p>A cloud-native Security Operations Centre built from scratch in Azure: a Windows Server 2025 target
+        running Sysmon, Azure Monitor Agent shipping Windows Security and Sysmon logs through a Data Collection
+        Rule into a Log Analytics workspace, and Microsoft Sentinel on top for detection and dashboards. I then
+        attacked my own environment &mdash; RDP brute-force attempts and Nmap scans &mdash; and wrote KQL to find
+        what I had done. <strong>What it demonstrates:</strong> building the telemetry pipeline before the
+        detections, rather than the other way round.</p>
+      <div class="sp"></div>
+      <details class="disc">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <p>I built the whole chain rather than operating one. Resource group, Log Analytics workspace, a target
+            VM with Sysmon installed, the Azure Monitor Agent wired up through a Data Collection Rule so that
+            Windows Security events and Sysmon operational logs actually landed somewhere queryable, then Sentinel
+            as the layer on top. Only once logs were flowing did I generate traffic: repeated failed RDP logons to
+            produce Event ID 4625, and port scans to produce Sysmon Event ID 3 network connections. Then I wrote
+            the analytics rules and dashboards that would have caught it.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>This is the design competency in its least visible form. The design decision was not the dashboard
+            &mdash; it was what telemetry to collect, at what granularity, and where to keep it, because that
+            decision determines everything you can ever detect afterwards. Getting it wrong is silent. It also
+            connects directly to <a href="goals.html#cloud-security">Goal 2</a>: the placement taught me to
+            operate a detection stack, and this was my attempt to build one where I had made every choice myself.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>What I learned is how many decisions were already made for me in a working environment. Collection
+            scope, retention, what counts as normal for a given host &mdash; all of that was inherited, and I had
+            never noticed it. The uncomfortable part is that my first detections were written knowing exactly what
+            the attack looked like, which means I was tuning to a test I had designed. That is not the same skill
+            as detecting something unfamiliar, and I should not confuse the two when I describe this work. What I
+            would do differently is establish a baseline before attacking &mdash; run the environment normally for
+            a while, record what ordinary activity looks like, and build detections against that, so they have a
+            reference point rather than a target.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Design</strong> &mdash; the telemetry architecture is the design, and it was chosen
+            deliberately to support detections that did not exist yet. <strong>Use of Engineering Tools</strong>
+            &mdash; Azure Monitor, Data Collection Rules, Sentinel, Sysmon and KQL each configured and used for a
+            specific job. <strong>Investigation</strong> &mdash; validating that the pipeline carried real evidence
+            by reproducing attacks and confirming what surfaced.</p>
+        </div>
+      </details>
+
+      <!-- artifact 07 -->
+      <div class="sp-2"></div>
+      <h3 id="suricata-splunk-soc">### Artifact 07 &mdash; Suricata &amp; Splunk SOC lab</h3>
+      <div class="sp"></div>
+      <p class="t-dim">independent project &#183; network intrusion detection &#183; <a href="https://github.com/mchlrd/SuricataSplunkSOC" target="_blank" rel="noopener">source &#8599;</a></p>
+      <div class="sp"></div>
+      <p class="t-hl">
+        <span class="badge badge--comp">Use of Engineering Tools</span>
+        <span class="badge badge--comp">Investigation</span>
+        <span class="badge badge--comp">Knowledge Base for Engineering</span>
+      </p>
+      <div class="sp"></div>
+      <p class="t-lead">Introduction</p>
+      <p>A self-contained network monitoring lab: Kali Linux as the attacker, a Windows victim, Suricata IDS
+        inspecting the traffic, and Splunk Enterprise ingesting the alerts into real-time dashboards. I wrote
+        custom Suricata rules for reconnaissance behaviour &mdash; ICMP sweeps, TCP SYN scans, Nmap scans, and
+        both NULL and FIN scans &mdash; and built SPL queries to visualise alert distribution and top source IPs.
+        <strong>What it demonstrates:</strong> writing detection logic means understanding what an attack actually
+        looks like on the wire.</p>
+      <div class="sp"></div>
+      <details class="disc">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <p>I segmented a virtualised network so the attacker and victim lived on an isolated subnet, then set
+            Suricata inspecting the interface with a local rules file I wrote myself. The rules were the real
+            work: a SYN-scan signature, an Nmap signature, a threshold rule for repeated connection attempts from
+            one source, and separate rules for NULL and FIN scans. Splunk monitored the alert log as a file input
+            under a custom sourcetype, and I built a timechart of alerts by message and a pie chart of alert
+            distribution against it.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>This is where the knowledge-base competency became concrete rather than theoretical. A SYN scan, a
+            NULL scan and a FIN scan are three different exploitation of the same TCP handshake, and they produce
+            three different packet signatures &mdash; which means a rule that catches one can miss the others
+            entirely. Writing the rules forced me to understand the protocol at the level of flags, not
+            descriptions. It sits under <a href="goals.html#cloud-security">Goal 2</a> as the network half of the
+            detection work I want to specialise in.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>What changed my thinking is the realisation that detection coverage is not a shield &mdash; it is a
+            set of blind spots you have mapped. Running my own rules against my own scans made that concrete: they
+            caught everything, because I wrote them after choosing the attacks. A rule that passes its test tells
+            you almost nothing about a rule that has never met an adversary. What I would do differently is attack
+            the detection instead of confirming it: run a deliberately slow, fragmented or obfuscated scan against
+            my own signatures to find where they fail, and treat the failures as the actual deliverable. I also
+            learned that a lab has real resource costs &mdash; the multiple VMs and a full SIEM need serious
+            hardware, which is a genuine engineering constraint and not just an inconvenience.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Use of Engineering Tools</strong> &mdash; Suricata rule syntax, Splunk search processing
+            language, and virtualised network configuration, each used to produce a specific analytical result.
+            <strong>Investigation</strong> &mdash; correlating alerts across two tools to separate confirmed
+            reconnaissance from ordinary background traffic.</p>
+        </div>
+      </details>
+
+      <!-- artifact 08 -->
+      <div class="sp-2"></div>
+      <h3 id="pfsense-lab">### Artifact 08 &mdash; pfSense network security lab</h3>
+      <div class="sp"></div>
+      <p class="t-dim">independent project &#183; network segmentation &amp; policy &#183; <a href="https://github.com/mchlrd/pfHomeLab" target="_blank" rel="noopener">source &#8599;</a></p>
+      <div class="sp"></div>
+      <p class="t-hl">
+        <span class="badge badge--comp">Design</span>
+        <span class="badge badge--comp">Investigation</span>
+        <span class="badge badge--comp">Professionalism</span>
+      </p>
+      <div class="sp"></div>
+      <p class="t-lead">Introduction</p>
+      <p>A controlled lab evaluating how a stateful firewall actually behaves rather than how it is described:
+        pfSense as a Layer 3 gateway with session tracking, internal clients and target hosts, and deliberate
+        service enumeration across SMB, RDP, RPC, NetBIOS and HTTP/HTTPS. Scan results were cross-referenced
+        against firewall logs to distinguish open, closed and filtered states, and to test how rule ordering
+        changes what is reachable. <strong>What it demonstrates:</strong> that policy is defined by rule order,
+        and that the log is the only proof of what the policy really is.</p>
+      <div class="sp"></div>
+      <details class="disc">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <p>I placed a firewall between internal hosts and inspected everything crossing it, then tried to break
+            my own rules. I checked stateful behaviour properly &mdash; confirming it tracked sessions, separated
+            new connections from established ones, and logged pass, block and drop distinctly &mdash; then scanned
+            across the high-risk ports and compared what the scanner reported against what the log recorded. The
+            rule-order tests were the most revealing part: deliberately moving and reordering rules to see whether
+            the policy I had intended was the policy that was enforced.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>This is the lab that most directly reinforced my placement work, where I administered Cisco Meraki
+            MX firewall rules, VPN policies and security event logging. Doing the same job on pfSense &mdash; where
+            I had to build the topology myself instead of inheriting one &mdash; clarified what those Meraki rules
+            were actually doing and why their order was not arbitrary. It also made the distinction between a
+            filtered and a closed port concrete, which is a difference that matters when you are reading a scan
+            result and deciding whether a service is safe.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>What changed my thinking is that rule <em>order</em> matters more than rule content. A rule can be
+            perfectly written, correctly scoped and completely inert because of what sits above it, and nothing
+            about the rule list tells you that. I understood this properly only after watching traffic succeed to
+            a port I believed was blocked, and having to explain why to myself. Since then I am careful with the
+            sentence "the firewall blocks that" &mdash; it is a claim about an ordering, and the only evidence
+            for it is the log. What I would do differently is write the intended policy matrix first &mdash; what
+            is allowed to talk to what, on which port, in which direction &mdash; then implement it, then verify
+            against it. I built rules first and inferred my own intent afterwards, which is backwards and is the
+            mistake the lab was expensive enough to teach me.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Design</strong> &mdash; segmentation and rule structure chosen to express an intended policy
+            under real constraints. <strong>Investigation</strong> &mdash; treating firewall logs as the primary
+            source of evidence and using them to validate or falsify what the rules were supposed to do.
+            <strong>Professionalism</strong> &mdash; the lab was documented throughout with screenshots and a
+            written record, because an undocumented configuration cannot be verified by anyone else.</p>
+        </div>
+      </details>
+
+      <!-- artifact 09 -->
+      <div class="sp-2"></div>
+      <h3 id="flight-price-ml">### Artifact 09 &mdash; Flight price prediction</h3>
+      <div class="sp"></div>
+      <p class="t-dim">independent project &#183; machine learning &#183; <a href="https://github.com/mchlrd/Flight-Price-Prediction-ML" target="_blank" rel="noopener">source &#8599;</a></p>
+      <div class="sp"></div>
+      <p class="t-hl">
+        <span class="badge badge--comp">Knowledge Base for Engineering</span>
+        <span class="badge badge--comp">Problem Analysis</span>
+        <span class="badge badge--comp">Investigation</span>
+      </p>
+      <div class="sp"></div>
+      <p class="t-lead">Introduction</p>
+      <p>The one artifact here that is not security work, and the reason it is included is that its most useful
+        outcome was a lesson about measurement rather than about models. I built a regression pipeline in Python
+        that predicts airline ticket prices from flight attributes &mdash; carrier, route, timings, stops, class,
+        duration and days until departure &mdash; using a Random Forest Regressor with GridSearchCV and
+        RandomizedSearchCV for hyperparameter tuning, evaluated on R&sup2;, MAE, MSE and RMSE.</p>
+      <div class="sp"></div>
+      <details class="disc">
+        <summary class="chip">reflection <span class="glyph"></span></summary>
+        <div class="panel">
+          <div class="sp"></div>
+          <p class="t-lead">Retell &mdash; what I created or did</p>
+          <p>I cleaned the dataset, dropped the columns that carried no signal, encoded the categorical features
+            with dummy variables and label encoding, and split the data 80/20. I trained a Random Forest
+            Regressor, then spent a substantial amount of time running GridSearchCV and RandomizedSearchCV to
+            find better hyperparameters, and visualised predicted against actual prices along with feature
+            importance. The final model reported an R&sup2; of 0.979.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Relate &mdash; how this connects to my goals</p>
+          <p>This connects to the knowledge-base competency and, unexpectedly, to the way I now approach
+            detection work. Evaluating a model is structurally the same problem as evaluating a detection: you
+            are asking whether a strong-looking number actually means what you want it to mean. It also gives me
+            a second discipline to draw on &mdash; the automation and analysis I do in security increasingly
+            involves statistical reasoning, and this was the project where I learned how easy it is to be
+            misled by a metric.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Reflect &mdash; what I learned</p>
+          <p>What changed my thinking was learning what R&sup2; does not tell you. An R&sup2; of 0.979 reads as a
+            clear success, and with hindsight I treat it as a warning instead: the dataset is a clean,
+            simplified one in which price is largely a function of the attributes provided, so a flexible
+            model can recover something close to a deterministic relationship. That is fitting, not forecasting.
+            I did not distinguish those two things at the time, and I presented the score as evidence of a good
+            model. What I would do differently is interrogate the data before tuning anything: ask whether the
+            target is derivable from the features, look deliberately for leakage, and hold out something the
+            model genuinely cannot already know. The hyperparameter search was the most enjoyable part of the
+            project and probably the least important &mdash; the consequential decision was dataset selection,
+            which I gave almost no thought to.</p>
+          <div class="sp"></div>
+          <p class="t-lead">Competency</p>
+          <p><strong>Knowledge Base for Engineering</strong> &mdash; regression, feature encoding and model
+            evaluation applied end to end in Python. <strong>Problem Analysis</strong> &mdash; framing a
+            prediction task and then having to reconsider whether the framing itself was sound.
+            <strong>Investigation</strong> &mdash; the discipline of questioning a result that looked good rather
+            than accepting it, which is the part of this project I would defend.</p>
+        </div>
+      </details>
+
       <!-- ================= ACADEMIC WORK ================= -->
       <div class="sp-2"></div>
       <h2 id="course-work">## Course work &mdash; to be added</h2>
@@ -387,6 +636,7 @@
   <span class="who">Mykhailo Rud</span>
   <span class="hide-sm"><a href="mailto:rudmichael@outlook.com">rudmichael@outlook.com</a></span>
   <span class="hide-sm"><a href="https://www.linkedin.com/in/mchlurd/" target="_blank" rel="noopener">linkedin</a></span>
+  <span class="hide-sm"><a href="https://github.com/mchlrd" target="_blank" rel="noopener">github</a></span>
   <span class="hide-sm">Last updated: 2026-09-25</span>
   <span class="grow"></span>
   <span class="hide-sm k">&#8592; &#8594; navigate</span>

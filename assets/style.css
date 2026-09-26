@@ -234,6 +234,20 @@ img { max-width: 100%; display: block; }
 /* bullet list with a hanging indent */
 .bul li { display: grid; grid-template-columns: 2ch minmax(0, 1fr); }
 
+/* Portrait photo. Source is 570x760 (3:4, 2x for retina), so 285x380 is exactly
+   15x20 characters on the 19px grid and keeps the gutter aligned. */
+.photo {
+  display: block;
+  width: 285px;
+  height: 380px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  filter: grayscale(1) contrast(1.06);
+  transition: filter .4s ease, border-color .4s ease;
+}
+.photo:hover { filter: none; border-color: var(--hl); }
+.photo-caption { color: var(--gutter); }
+
 /* inline code */
 .doc code { background: var(--chip-bg); color: var(--fg-2); padding: 0 4px; }
 
