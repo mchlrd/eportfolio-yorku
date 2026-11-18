@@ -36,6 +36,7 @@ the real line count.
 | `assets/style.css` | The whole design system (tokens, grid, editor chrome, print) |
 | `assets/main.js` | Editor chrome: tree, gutter, particle field, keyboard nav |
 | `assets/photo.jpg` | Portrait, 570×760 (2× for the 285×380 display box) |
+| `resume.pdf` | Current résumé, linked from Section B |
 
 ## Editing the shared assets
 
@@ -86,9 +87,6 @@ third-party images are not published without permission.
 
 ## Outstanding
 
-Items still awaiting content are marked in the UI with an amber `todo` badge rather than quietly
-omitted — see the **Status** section on the home page. Currently waiting on:
-
-- interest and skills assessment results (with dates)
-- EQ and learning-style results (with dates)
-- selected academic course projects for Section E
+Section E is the only one still filling: academic course projects are added as each course
+completes. Everything else — About, Career and résumé, Goals and portfolios, the twelve
+reflections — is written and published.

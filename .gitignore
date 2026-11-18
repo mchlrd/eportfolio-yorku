@@ -9,3 +9,6 @@ desktop.ini
 # Local preview server logs
 *.log
 *.log.err
+
+# Uploaded course material — contains personal data, never published
+.cloud-attachments/
